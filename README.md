@@ -1,10 +1,18 @@
-# Building a Multimodal Agent
-## Tech Stack Used
-### Replicate AI:
-Replicate is a cloud-based platform that helps businesses run and host machine learning (ML) models.
+# AI Crew for Reviewing Markdown Syntax
 
-### CrewAI:
-CrewAI is an open-source framework that uses artificial intelligence (AI) to orchestrate autonomous AI agents to work together as a team to complete tasks.
+## Introduction
+This project is an example using the CrewAI framework to automate the process reviewing a markdown file for syntax issues. A general assistant leverages a custom tool to get a list of markdown linting errors. It then summarizes those errors into a list of changes to make to the document.
 
-### Groq:
-Groq is an artificial intelligence (AI) company that designs and manufactures hardware and software to speed up AI inference performance.
+## Running the Script
+This example uses the OpenAI API to call a model. This can be through a locally hosted solution like LM Studio, or the Open AI API endpoint with your API key. 
+
+=======
+- **Configure Environment**: Rename `.env.example` to `.env` and set up the environment variables the model, endpoint url, and api key.
+- **Install Dependencies**: Run `poetry install --no-root`.
+- **Execute the Script**: Run `python main.py README.md` to see a list of recommended changes to this document.
+
+## Details & Explanation
+- **Running the Script**: Execute `python main.py <path to markdown file>`. The script will leverage the CrewAI framework to process the specified file and return a list of changes.
+
+## License
+This project is released under the MIT License.
